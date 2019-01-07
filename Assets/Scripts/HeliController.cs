@@ -1,0 +1,53 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HeliController : MonoBehaviour
+{
+    [Header("Controls")]
+    public float strafeTilt = 5f;
+    public float movementSpeed = 5f;
+    public float fallbackSmooth = 3f;
+    public Rigidbody heliRB;
+
+    [Space]
+    [Header("Constraints")]
+    public float maxXDipAngle = 30;
+    public float maxZDipAngle = 30;
+
+    float rotY, moveZ, tiltZ;
+    Vector3 heliRotation;
+
+    private void Start()
+    {
+        heliRB = GetComponent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        rotY = Input.GetAxis("Horizontal");
+        moveZ = Input.GetAxis("Vertical");
+        tiltZ = Input.GetAxis("Tilt");
+        transform.Rotate(0, 0, -tiltZ * Time.deltaTime, Space.Self);
+        heliRotation = heliRB.rotation.eulerAngles;
+
+        heliRB.AddRelativeTorque(0, rotY, 0);
+        heliRB.AddRelativeForce(tiltZ * movementSpeed, 0, moveZ * movementSpeed, ForceMode.Acceleration);
+        CheckConstrains();
+    }
+
+    private void LateUpdate()
+    {
+        if (tiltZ != 0)
+            return;
+        heliRB.MoveRotation(Quaternion.Slerp(heliRB.rotation, Quaternion.Euler(0, heliRotation.y, 0), 1 / fallbackSmooth));
+    }
+
+    void CheckConstrains()
+    {
+        var xClamped = Mathf.Clamp(heliRotation.x, -maxXDipAngle, maxXDipAngle);
+        var zClamped = Mathf.Clamp(heliRotation.z, -maxZDipAngle, maxZDipAngle);
+        transform.eulerAngles = new Vector3(xClamped, heliRotation.y, zClamped);
+        //heliRB.rotation = Quaternion.Euler(xClamped, heliRotation.y, zClamped);
+    }
+}
