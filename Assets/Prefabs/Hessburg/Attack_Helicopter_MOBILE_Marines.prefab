@@ -370,7 +370,7 @@ MonoBehaviour:
   tailRotor: {fileID: 460938}
   helicopterSound: {fileID: 8267148}
   targetRPM: 0
-  engineOn: 0
+  engineOn: 1
   useAcceleration: 1
   currentRPM: 0
 --- !u!1001 &100100000

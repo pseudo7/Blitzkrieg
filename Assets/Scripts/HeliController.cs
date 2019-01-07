@@ -10,7 +10,7 @@ public class HeliController : MonoBehaviour
     public float fallbackSmooth = 3f;
     public Rigidbody heliRB;
     public Transform heliModel;
-    public Transform shadowPlain;
+    public EngineController engine;
 
     [Space]
     [Header("Constraints")]
@@ -27,6 +27,8 @@ public class HeliController : MonoBehaviour
         tiltZ = Input.GetAxis("Tilt");
         heliModel.Rotate(0, 0, -tiltZ, Space.Self);
 
+        engine.targetRPM = Mathf.Abs(moveZ);
+
         heliRB.AddRelativeTorque(0, rotY, 0);
         heliRB.AddRelativeForce(tiltZ * movementSpeed, 0, moveZ * movementSpeed, ForceMode.Acceleration);
     }
@@ -35,6 +37,6 @@ public class HeliController : MonoBehaviour
     {
         if (tiltZ != 0)
             return;
-        heliModel.localRotation = Quaternion.Slerp(heliModel.localRotation, Quaternion.identity, 1 / fallbackSmooth);
+        heliModel.localRotation = Quaternion.Lerp(heliModel.localRotation, Quaternion.identity, 1 / fallbackSmooth);
     }
 }
