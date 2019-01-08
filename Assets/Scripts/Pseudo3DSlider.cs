@@ -1,23 +1,33 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pseudo3DSlider : MonoBehaviour
 {
     [SerializeField] GameObject[] prefabs;
+    [SerializeField] Button playButton;
+    [SerializeField] Text chopperName;
     [SerializeField] Transform slotTransform;
     [SerializeField] Vector3 prefabRotation = new Vector3(0, 120, 0);
-    [SerializeField] float slotSize = 10f, slidingSpeed = 10f;
+    [SerializeField] float slotSize = 15f, slidingSpeed = 10f;
+    static int currentIndex;
 
+    List<GameObject> spawnedPrefabs;
     bool isSliding;
     float limit;
 
     private void Start()
     {
+        spawnedPrefabs = new List<GameObject>();
         var spawnRotation = Quaternion.Euler(prefabRotation);
         int i;
         for (i = 0; i < prefabs.Length; i++)
-            Instantiate(prefabs[i], Vector3.right * i * slotSize, spawnRotation, slotTransform);
+            spawnedPrefabs.Add(Instantiate(prefabs[i], Vector3.right * i * slotSize, spawnRotation, slotTransform));
+
         limit = (i - 1) * -slotSize;
+        chopperName.text = prefabs[currentIndex].name;
+        spawnedPrefabs[currentIndex].GetComponent<EngineController>().engineOn = true;
     }
 
     void Update()
@@ -54,11 +64,27 @@ public class Pseudo3DSlider : MonoBehaviour
         nextPos *= slotSize;
         nextPos += slotTransform.position;
 
+        playButton.interactable = false;
+        spawnedPrefabs[currentIndex].GetComponent<EngineController>().engineOn = false;
+
+        currentIndex += slideLeft ? 1 : -1;
+
+        chopperName.text = prefabs[currentIndex].name;
+
         while (slideLeft ? slotTransform.position.x > nextPos.x : slotTransform.position.x < nextPos.x)
         {
             slotTransform.position = Vector3.MoveTowards(slotTransform.position, nextPos, Time.deltaTime * slidingSpeed);
             yield return new WaitForEndOfFrame();
         }
+        spawnedPrefabs[currentIndex].GetComponent<EngineController>().engineOn = true;
+        playButton.interactable = true;
+
         isSliding = false;
+    }
+
+    public void PlayGame()
+    {
+        DDOL_Navigation.SelectedChopper = prefabs[currentIndex];
+        DDOL_Navigation.Instance.LoadGame();
     }
 }
