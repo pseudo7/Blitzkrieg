@@ -8,6 +8,11 @@ public class GyroCamera : MonoBehaviour
 
     float yRotation, xRotation;
 
+    private void Start()
+    {
+        Input.gyro.enabled = true;
+    }
+
     void Update()
     {
         yRotation += -Input.gyro.rotationRateUnbiased.y;

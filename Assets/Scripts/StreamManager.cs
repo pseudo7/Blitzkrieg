@@ -7,6 +7,7 @@ public class StreamManager : MonoBehaviour
 {
     public RawImage background;
     public AspectRatioFitter fitter;
+    public RectTransform canvasTransform;
 
     [Range(1, 100)]
     public int camQuality = 20;
@@ -17,6 +18,8 @@ public class StreamManager : MonoBehaviour
 
     void Start()
     {
+        canvasTransform.sizeDelta = new Vector2(Screen.width, Screen.height);
+
         WebCamDevice[] camDevices = WebCamTexture.devices;
 
         if (camDevices.Length == 0)
@@ -44,8 +47,8 @@ public class StreamManager : MonoBehaviour
 
     void SetUpWebCam()
     {
-        int width = (Screen.width / 100) * camQuality;
-        int height = (Screen.height / 100) * camQuality;
+        int width = Screen.width / 100 * camQuality;
+        int height = Screen.height / 100 * camQuality;
 
         foreach (var cam in WebCamTexture.devices)
             if (useFrontCamera)
