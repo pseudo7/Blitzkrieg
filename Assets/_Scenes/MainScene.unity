@@ -218,6 +218,7 @@ MonoBehaviour:
   strafeSpeed: 3
   throttleSpeed: 5
   liftSpeed: 5
+  rotationSpeed: 50
   normalFallback: 60
   tiltFallback: 40
   dipFallback: 40

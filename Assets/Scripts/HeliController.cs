@@ -43,7 +43,7 @@ public class HeliController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
 
         rotY = CrossPlatformInputManager.GetAxis("Rotational_H");

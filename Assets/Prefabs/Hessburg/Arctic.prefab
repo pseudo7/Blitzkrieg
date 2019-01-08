@@ -1,48 +1,47 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &108442
+--- !u!1 &103496
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 417648}
-  - component: {fileID: 3316982}
-  - component: {fileID: 2366064}
+  - component: {fileID: 499226}
+  - component: {fileID: 11425350}
   m_Layer: 0
-  m_Name: Mobile_Main_Rotor_ARMY
+  m_Name: Arctic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &117394
+--- !u!1 &129228
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 477546}
-  - component: {fileID: 3351198}
-  - component: {fileID: 2395860}
+  - component: {fileID: 408014}
+  - component: {fileID: 3399320}
+  - component: {fileID: 2345028}
   m_Layer: 0
-  m_Name: Mobile_AH_Hull_ARMY
+  m_Name: Mobile_Tail_Rotor_Arctic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &140066
+--- !u!1 &145322
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 445252}
-  - component: {fileID: 8267148}
+  - component: {fileID: 416354}
+  - component: {fileID: 8275840}
   m_Layer: 0
   m_Name: HelicopterSound
   m_TagString: Untagged
@@ -50,114 +49,115 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &147156
+--- !u!1 &148618
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 447132}
-  - component: {fileID: 11453472}
+  - component: {fileID: 423148}
+  - component: {fileID: 3304456}
+  - component: {fileID: 2317442}
   m_Layer: 0
-  m_Name: Attack_Helicopter_MOBILE_Army
+  m_Name: Mobile_AH_Hull_Arctic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &169896
+--- !u!1 &167234
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 460938}
-  - component: {fileID: 3393868}
-  - component: {fileID: 2398004}
+  - component: {fileID: 457472}
+  - component: {fileID: 3312370}
+  - component: {fileID: 2368634}
   m_Layer: 0
-  m_Name: Mobile_Tail_Rotor_ARMY
+  m_Name: Mobile_Main_Rotor_Arctic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &417648
+--- !u!4 &408014
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 108442}
+  m_GameObject: {fileID: 129228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.3128487, y: -0.8535932, z: -8.116687}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 447132}
-  m_RootOrder: 1
+  m_Father: {fileID: 499226}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &445252
+--- !u!4 &416354
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 140066}
+  m_GameObject: {fileID: 145322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 447132}
+  m_Father: {fileID: 499226}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &447132
+--- !u!4 &423148
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147156}
+  m_GameObject: {fileID: 148618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 499226}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &457472
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 499226}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &499226
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 477546}
-  - {fileID: 417648}
-  - {fileID: 460938}
-  - {fileID: 445252}
+  - {fileID: 423148}
+  - {fileID: 457472}
+  - {fileID: 408014}
+  - {fileID: 416354}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &460938
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169896}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.315073, y: -0.853593, z: -8.116687}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 447132}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &477546
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 117394}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 447132}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &2366064
+--- !u!23 &2317442
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 108442}
+  m_GameObject: {fileID: 148618}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -166,7 +166,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c84b744202f864c05bac0ba6e6e12449, type: 2}
+  - {fileID: 2100000, guid: f4c6999d94ee04bd2afd75c945ad9964, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -186,12 +186,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &2395860
+--- !u!23 &2345028
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 117394}
+  m_GameObject: {fileID: 129228}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -200,7 +200,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c84b744202f864c05bac0ba6e6e12449, type: 2}
+  - {fileID: 2100000, guid: f4c6999d94ee04bd2afd75c945ad9964, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -220,12 +220,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &2398004
+--- !u!23 &2368634
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169896}
+  m_GameObject: {fileID: 167234}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -234,7 +234,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c84b744202f864c05bac0ba6e6e12449, type: 2}
+  - {fileID: 2100000, guid: f4c6999d94ee04bd2afd75c945ad9964, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -254,33 +254,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &3316982
+--- !u!33 &3304456
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 108442}
-  m_Mesh: {fileID: 4300004, guid: 6c8698a916a1b4050838578652232fbe, type: 3}
---- !u!33 &3351198
+  m_GameObject: {fileID: 148618}
+  m_Mesh: {fileID: 4300006, guid: 710c727ba7c264ad098adcbe6634e945, type: 3}
+--- !u!33 &3312370
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 117394}
-  m_Mesh: {fileID: 4300006, guid: 6c8698a916a1b4050838578652232fbe, type: 3}
---- !u!33 &3393868
+  m_GameObject: {fileID: 167234}
+  m_Mesh: {fileID: 4300000, guid: 710c727ba7c264ad098adcbe6634e945, type: 3}
+--- !u!33 &3399320
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169896}
-  m_Mesh: {fileID: 4300002, guid: 6c8698a916a1b4050838578652232fbe, type: 3}
---- !u!82 &8267148
+  m_GameObject: {fileID: 129228}
+  m_Mesh: {fileID: 4300002, guid: 710c727ba7c264ad098adcbe6634e945, type: 3}
+--- !u!82 &8275840
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 140066}
+  m_GameObject: {fileID: 145322}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -355,22 +355,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &11453472
+--- !u!114 &11425350
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147156}
+  m_GameObject: {fileID: 103496}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08d349811d1ee874c848ff64dc37a55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainRotor: {fileID: 417648}
-  tailRotor: {fileID: 460938}
-  helicopterSound: {fileID: 8267148}
+  mainRotor: {fileID: 457472}
+  tailRotor: {fileID: 408014}
+  helicopterSound: {fileID: 8275840}
   targetRPM: 0
-  engineOn: 0
+  engineOn: 1
   useAcceleration: 1
   currentRPM: 0
 --- !u!1001 &100100000
@@ -382,5 +382,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 147156}
+  m_RootGameObject: {fileID: 103496}
   m_IsPrefabParent: 1
