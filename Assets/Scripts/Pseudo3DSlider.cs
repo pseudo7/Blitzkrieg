@@ -23,7 +23,7 @@ public class Pseudo3DSlider : MonoBehaviour
         var spawnRotation = Quaternion.Euler(prefabRotation);
         int i;
         for (i = 0; i < prefabs.Length; i++)
-            spawnedPrefabs.Add(Instantiate(prefabs[i], Vector3.right * i * slotSize, spawnRotation, slotTransform));
+            spawnedPrefabs.Add(Instantiate(prefabs[i], Vector3.up + Vector3.right * i * slotSize, spawnRotation, slotTransform));
 
         limit = (i - 1) * -slotSize;
         chopperName.text = prefabs[currentIndex].name;
