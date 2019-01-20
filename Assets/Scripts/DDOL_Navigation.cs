@@ -19,6 +19,14 @@ public class DDOL_Navigation : MonoBehaviour
         else Destroy(gameObject);
     }
 
+#if UNITY_EDITOR
+    [UnityEditor.MenuItem("Pseudo/Capture")]
+    public static void Capture()
+    {
+        ScreenCapture.CaptureScreenshot(string.Format("{0}.png", System.DateTime.Now.Ticks.ToString()));
+    }
+#endif
+
     public void LoadGame()
     {
         SceneManager.LoadScene("MainScene");
